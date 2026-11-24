@@ -1,223 +1,124 @@
-Plum & Thread
+<div align="center">
 
-A responsive, single-page B2B apparel manufacturing website for Plum & Thread, showcasing custom garment production, product specifications, manufacturing capabilities, and an interactive quotation workflow. The website is positioned around Tiruppur, Tamil Nadu, India, and presents apparel options for brands, businesses, institutions, and bulk buyers.
+# 🍇 Plum & Thread
 
+### Custom Apparel Manufacturing & Bulk Garment Quotations
 
+**A responsive B2B apparel website built with React, Vite, and Tailwind CSS.**
 
-Project type: Front-end web application
-Build tool: Vite
-UI library: React
-Styling: Tailwind CSS
+<br />
 
+![React](https://img.shields.io/badge/React-19-61DAFB?style=for-the-badge&logo=react&logoColor=white)
+![Vite](https://img.shields.io/badge/Vite-8-646CFF?style=for-the-badge&logo=vite&logoColor=white)
+![Tailwind CSS](https://img.shields.io/badge/Tailwind_CSS-4-06B6D4?style=for-the-badge&logo=tailwindcss&logoColor=white)
+![JavaScript](https://img.shields.io/badge/JavaScript-ES6%2B-F7DF1E?style=for-the-badge&logo=javascript&logoColor=black)
 
+![Status](https://img.shields.io/badge/Project-Frontend-blue?style=flat-square)
+![License](https://img.shields.io/badge/License-Not_Specified-lightgrey?style=flat-square)
 
+</div>
 
-Table of Contents
+---
 
+## 📌 About the Project
 
-Overview
+**Plum & Thread** is a product-focused business website for a custom apparel and garment manufacturer based in **Tiruppur, Tamil Nadu, India**.
 
-Key Features
+The website allows visitors to explore garment categories, view product and fabric specifications, configure bulk quantities, calculate estimated quotations with GST, and prepare a printable quotation.
 
-Pages and Sections
+The design uses a plum-and-gold brand identity, responsive layouts, product imagery, interactive modals, and sections explaining the manufacturing process.
 
-Technology Stack
+> **Project type:** Frontend web application  
+> **Architecture:** Single-page React application  
+> **Build tool:** Vite
 
-Project Structure
+---
 
-Getting Started
+## ✨ Features
 
-Available Scripts
+| Feature | Description |
+|:--|:--|
+| 📱 **Responsive Design** | Layout adapts to desktop, tablet, and mobile screens. |
+| 🛍️ **Product Catalogue** | Browse apparel products with search and category filters. |
+| 🎨 **Product Details** | View fabric details, GSM, colours, customization options, MOQ, and estimated turnaround. |
+| 🧮 **Quotation Calculator** | Add products, update quantities, and calculate estimated order values. |
+| 🧾 **GST Calculation** | Calculate item-level GST and the overall quotation total using configured product rates. |
+| 🖨️ **Printable Quotation** | View and print the prepared quotation. |
+| 📦 **Sample Request Form** | Enter contact, company, delivery, and fabric requirement details. |
+| 🏭 **Manufacturing Workflow** | Explore the seven stages of garment production. |
+| 📊 **Business Highlights** | Display manufacturing statistics and business information. |
+| 💬 **Testimonials & FAQ** | Review testimonial content and expand frequently asked questions. |
+| 🎉 **Interactive UI** | Product modals, quotation interactions, icons, and confetti animation. |
 
-Quotation Calculation
+---
 
-Product Data
+## 🧭 Website Sections
 
-Current Scope and Limitations
+The project is currently a **single-page website**. Navigation links move visitors between sections of the same page.
 
-Customization
+| Section | What it contains |
+|:--|:--|
+| 🧭 Navbar | Brand navigation and quotation item count |
+| 🏠 Hero | Brand introduction and primary calls to action |
+| 📊 Credibility Stats | Manufacturing metrics and highlights |
+| 👕 Product Catalogue | Product search, filters, and product details |
+| 🧮 Quotation Studio | Product quantities and estimated quotation |
+| 🏭 Manufacturing Process | Seven-stage production workflow |
+| ⭐ Why Choose Us | Manufacturer advantages |
+| 💬 Testimonials | Customer testimonial content |
+| ❓ FAQ | Frequently asked questions |
+| 📍 Footer & Contact | Business location and contact information |
 
-Deployment
+---
 
-License
+## 🛠️ Tech Stack
 
+### Core technologies
 
-Overview
+| Technology | Usage |
+|:--|:--|
+| ⚛️ **React 19** | Component-based user interface |
+| 🟨 **JavaScript (ES Modules)** | Application logic and interactions |
+| ⚡ **Vite 8** | Development server and production bundler |
+| 🎨 **Tailwind CSS 4** | Utility-first styling |
+| 🧩 **HTML5** | Web document structure |
+| 🎨 **CSS3** | Global and component styling |
 
-Plum & Thread is a product-focused business website concept for a custom clothing and garment manufacturer. It helps visitors explore garment categories, review fabric and customization specifications, estimate bulk-order costs, and prepare a printable quotation.
+### Libraries and development tools
 
+| Package | Usage |
+|:--|:--|
+| `react` | Builds the user interface |
+| `react-dom` | Renders React components in the browser |
+| `lucide-react` | Interface icons |
+| `canvas-confetti` | Confetti animation in the sample request experience |
+| `tailwindcss` | Utility CSS framework |
+| `@tailwindcss/vite` | Tailwind CSS integration for Vite |
+| `vite` | Development and production build tool |
+| `@vitejs/plugin-react` | React support in Vite |
+| `postcss` | CSS processing |
+| `autoprefixer` | CSS vendor-prefix processing |
+| `oxlint` | JavaScript and JSX linting |
+| `@types/react` / `@types/react-dom` | React type definitions in the development toolchain |
 
-The interface uses a plum-and-gold visual identity, responsive layouts, product imagery, interactive modals, and dedicated sections describing the manufacturing workflow and business advantages.
+### Typography
 
+- **Inter** — Primary interface and body font.
+- **Playfair Display** — Editorial-style headings.
 
-Key Features
+Both fonts are loaded through Google Fonts in `index.html`.
 
-1. Responsive landing page
+---
 
+## 📂 Project Structure
 
-Single-page layout with navigation to the main website sections.
-
-Responsive navigation menu for smaller screens.
-
-Hero section with calls to action for product exploration and sample requests.
-
-Consistent Plum & Thread brand styling.
-
-
-2. Product catalogue
-
-
-Product catalogue covering multiple apparel and accessory categories.
-
-Search and category filtering.
-
-Grid and table/list presentation options.
-
-Product cards with pricing and key information.
-
-Product detail modal with fabric information, available colours, customization options, recommended minimum quantities, and turnaround estimates.
-
-Add products and quantities to the quotation.
-
-
-3. Interactive quotation studio
-
-
-Add products to a quotation and update quantities.
-
-Remove individual products or clear the quotation.
-
-Live calculation of total pieces and estimated order value.
-
-Product-specific GST rates.
-
-Item-level and overall quotation calculations.
-
-Printable quotation view.
-
-
-4. Sample request interface
-
-
-Sample request modal with contact and company information fields.
-
-Captures delivery address and fabric/specification notes in the form UI.
-
-Displays an on-screen confirmation state after submission.
-
-
-5. Manufacturing process
-
-
-Seven-stage manufacturing process presentation:
-Yarn sourcing and knitting
-Dyeing and compacting
-Pattern making and cutting
-Printing and embroidery
-Garment assembly and stitching
-Quality inspection
-Ironing, packaging, and dispatch
-
-Stage descriptions, lead-time information, and process highlights.
-
-
-6. Business information and trust sections
-
-
-Manufacturing credibility statistics.
-
-Reasons to choose the manufacturer.
-
-Customer testimonial section.
-
-FAQ accordion.
-
-Footer with business location and contact information.
-
-
-7. UI and interaction details
-
-
-Product, printable quotation, and sample request modals.
-
-Icons from Lucide React.
-
-Confetti effect in the sample request experience.
-
-Currency and quotation formatting utilities.
-
-Google Fonts integration for Inter and Playfair Display.
-
-
-Pages and Sections
-
-The application is currently a single-page website, not a multi-route application.
-
-
-Section	Purpose
-Navbar	Brand navigation and quotation item count
-Hero	Brand introduction and primary calls to action
-Credibility Stats	Manufacturing metrics and credibility indicators
-Product Catalogue	Browse, search, filter, and inspect products
-Quotation Studio	Manage quantities and calculate estimated costs
-Manufacturing Process	Explain the seven-stage production workflow
-Why Choose Us	Present manufacturer advantages
-Testimonials	Display customer testimonial content
-FAQ	Answer common buyer questions
-Footer / Contact	Show location and contact information
-
-Technology Stack
-
-Core technologies
-
-Technology	Purpose
-HTML5	Application document structure
-CSS3	Styling foundations and custom styles
-JavaScript (ES Modules)	Application logic and interactions
-React 19	Component-based user interface
-React DOM	Rendering the React application
-Vite 8	Development server and production build
-Tailwind CSS 4	Utility-first styling
-@tailwindcss/vite	Tailwind CSS integration with Vite
-
-Libraries and tools
-
-Package	Purpose
-lucide-react	Icons used throughout the interface
-canvas-confetti	Confetti animation in the sample request experience
-autoprefixer	CSS vendor-prefix processing
-postcss	CSS transformation tooling
-oxlint	JavaScript/JSX linting
-
-Development dependencies
-
-
-@vitejs/plugin-react – React integration for Vite.
-
-@types/react and @types/react-dom – React type definitions included in the development toolchain.
-
-vite – Local development and production bundling.
-
-oxlint – Static code analysis.
-
-
-Fonts
-
-
-Inter – Main interface/body font.
-
-Playfair Display – Editorial/serif heading font.
-
-
-Fonts are loaded from Google Fonts in index.html.
-
-
-Project Structure
-
+```text
 Plum-and-Thread/
+│
 ├── public/
 │   ├── favicon.svg
 │   └── icons.svg
+│
 ├── src/
 │   ├── components/
 │   │   ├── CredibilityStats.jsx
@@ -234,247 +135,231 @@ Plum-and-Thread/
 │   │   ├── SampleRequestModal.jsx
 │   │   ├── Testimonials.jsx
 │   │   └── WhyChooseUs.jsx
+│   │
 │   ├── data/
 │   │   └── products.js
+│   │
 │   ├── utils/
 │   │   └── formatters.js
+│   │
 │   ├── App.css
 │   ├── App.jsx
 │   ├── index.css
 │   └── main.jsx
+│
 ├── index.html
 ├── package.json
 ├── package-lock.json
 ├── tailwind.config.js
 ├── vite.config.js
 └── README.md
+```
 
-Important files
+### 📄 Important Files
 
+| File | Responsibility |
+|:--|:--|
+| `src/App.jsx` | Main application component and shared state |
+| `src/data/products.js` | Product catalogue and website content data |
+| `src/utils/formatters.js` | Currency, percentage, and quotation formatting helpers |
+| `src/components/ProductCatalog.jsx` | Product search, filtering, and catalogue UI |
+| `src/components/QuotationTool.jsx` | Quotation items, quantities, and calculations |
+| `src/components/PrintableQuoteModal.jsx` | Printable quotation interface |
+| `src/components/SampleRequestModal.jsx` | Sample request form and confirmation UI |
+| `src/index.css` | Global styles |
+| `src/App.css` | Application-specific styles |
+| `index.html` | HTML entry point, page metadata, favicon, and font imports |
+| `vite.config.js` | Vite and Tailwind plugin configuration |
 
-src/App.jsx – Main application component and shared quotation/modal state.
+---
 
-src/data/products.js – Product catalogue, categories, manufacturing stages, metrics, testimonials, and FAQ content.
+## 🚀 Getting Started
 
-src/utils/formatters.js – Currency, percentage, and quotation helper functions.
+### ✅ Prerequisites
 
-src/components/ProductCatalog.jsx – Product search, filtering, and catalogue presentation.
+Install these tools before running the project:
 
-src/components/QuotationTool.jsx – Interactive quotation management and calculations.
+- [Node.js](https://nodejs.org/) — use a version compatible with the installed Vite release.
+- **npm** — included with Node.js.
+- [Git](https://git-scm.com/) — optional, for cloning and version control.
 
-src/components/PrintableQuoteModal.jsx – Printable quotation interface.
+### 1️⃣ Clone the repository
 
-src/components/SampleRequestModal.jsx – Sample request form and confirmation UI.
+Replace `YOUR_USERNAME` with your GitHub username.
 
-src/index.css and src/App.css – Global styles and application-specific styles.
-
-vite.config.js – Vite and Tailwind CSS plugin configuration.
-
-
-Getting Started
-
-Prerequisites
-
-Install the following before running the project:
-
-
-
-Node.js (a current version compatible with the installed Vite release)
-
-npm (included with Node.js)
-
-Git (optional, for cloning and version control)
-
-
-1. Clone the repository
-
+```bash
 git clone https://github.com/YOUR_USERNAME/Plum-and-Thread.git
+```
 
-2. Open the project folder
+### 2️⃣ Navigate to the project
 
+```bash
 cd Plum-and-Thread
+```
 
-3. Install dependencies
+### 3️⃣ Install dependencies
 
+```bash
 npm install
+```
 
-4. Start the development server
+### 4️⃣ Start the development server
 
+```bash
 npm run dev
+```
 
-Vite will print a local URL in the terminal, usually:
+Open the local URL printed in your terminal. Vite commonly uses:
 
-
+```text
 http://localhost:5173/
+```
 
-Open that address in your browser.
+### 5️⃣ Build for production
 
-
-5. Create a production build
-
+```bash
 npm run build
+```
 
-The optimized production files are generated in the dist/ directory.
+The production-ready files will be generated in the `dist/` directory.
 
+### 6️⃣ Preview the production build
 
-6. Preview the production build locally
-
+```bash
 npm run preview
+```
 
-Available Scripts
+---
 
-Command	Description
-npm run dev	Starts the Vite development server
-npm run build	Builds the production application into dist/
-npm run preview	Serves the production build locally
-npm run lint	Runs Oxlint checks
+## 📜 Available Commands
 
-Quotation Calculation
+| Command | Description |
+|:--|:--|
+| `npm install` | Installs project dependencies |
+| `npm run dev` | Starts the local development server |
+| `npm run build` | Creates the production build in `dist/` |
+| `npm run preview` | Previews the production build locally |
+| `npm run lint` | Runs Oxlint checks |
 
-The quotation interface maintains product quantities in React state. The application calculates:
+---
 
+## 🧮 How the Quotation Works
 
+The quotation interface uses React state to manage selected products and quantities.
 
-Item subtotal: product unit price × selected quantity.
+The calculations include:
 
-Item GST: item subtotal × the GST rate configured for that product.
+| Calculation | Formula |
+|:--|:--|
+| Item Subtotal | Unit Price × Quantity |
+| Item GST | Item Subtotal × GST Rate |
+| Item Total | Item Subtotal + Item GST |
+| Grand Total | Sum of all item totals |
+| Total Pieces | Sum of all selected quantities |
 
-Item total: item subtotal + item GST.
+**Note:** Product prices and GST rates are stored in local product data. Verify the applicable prices and tax rates before using the generated figures for an actual commercial quotation.
 
-Grand total: sum of all item totals.
+---
 
-Total pieces: sum of all selected product quantities.
+## 👕 Product Data
 
+Product information is maintained in:
 
-The product prices and GST rates are currently maintained in the local product data file. Treat displayed prices and tax rates as configurable example/business data and verify them before using the application for actual commercial quotations.
+```text
+src/data/products.js
+```
 
+Product entries can contain:
 
-Product Data
+- Product ID and name
+- Product category
+- Unit price and GST rate
+- Description
+- Fabric composition and GSM
+- Use cases
+- Customization methods
+- Available colours
+- Minimum order quantity (MOQ)
+- Estimated turnaround time
+- Product image URL
 
-Product definitions are maintained in src/data/products.js. Each product can include:
+To add or edit a product, update the `PRODUCTS` array. Product categories are maintained in the `CATEGORIES` array.
 
+---
 
+## ⚠️ Current Scope & Limitations
 
-Product ID and display name
+This repository contains a **frontend-only React application**. The inspected source does not include a backend API, database, authentication system, or payment integration.
 
-Category
+| Area | Current implementation |
+|:--|:--|
+| 🧮 Quotation | Managed in frontend React state |
+| 💾 Persistent storage | Cart persistence is not implemented |
+| 📩 Sample requests | Client-side form handling and on-screen confirmation |
+| 🗄️ Database | Not included |
+| 🔐 Authentication | Not included |
+| 💳 Payment gateway | Not included |
+| 🛠️ Admin dashboard | Not included |
 
-Unit price
+### Before using it in production
 
-GST rate
+- Connect the sample request form to a backend API or trusted form service so requests are actually delivered and stored.
+- Add server-side validation and spam protection.
+- Add suitable privacy and consent messaging before collecting customer information.
+- Verify product prices, GST rates, testimonials, statistics, and business claims.
+- Confirm contact details and address.
+- Consider hosting optimized product images locally or through an image service.
 
-Product description
+---
 
-Fabric composition and GSM
+## 🎨 Customization
 
-Intended use cases
+| What you want to change | Where to edit |
+|:--|:--|
+| Products and prices | `src/data/products.js` |
+| Product categories | `src/data/products.js` |
+| Manufacturing stages and FAQ content | `src/data/products.js` |
+| Brand colours and theme | `tailwind.config.js`, `src/index.css` |
+| Component styles | `src/App.css` |
+| Contact details | `src/components/Footer.jsx` |
+| Page title and metadata | `index.html` |
+| Font imports | `index.html` |
 
-Customization methods
+---
 
-Available colours and colour values
+## 🌐 Deployment
 
-Recommended minimum quantity
+The project produces a static website build and can be deployed to:
 
-Estimated turnaround time
+- [Vercel](https://vercel.com/)
+- [Netlify](https://www.netlify.com/)
+- [GitHub Pages](https://pages.github.com/)
 
-Product image URL
+### General deployment steps
 
+1. Push the project to your GitHub repository.
+2. Import the repository into your hosting provider.
+3. Set the install command to `npm install`.
+4. Set the build command to `npm run build`.
+5. Set the output directory to `dist`.
+6. Deploy and test the live website on desktop and mobile.
 
-To add or edit a product, update the PRODUCTS array in that file. Category names are maintained in the CATEGORIES array.
+> **GitHub Pages note:** For a repository-based Pages URL, configure the Vite `base` option to match the repository path before building.
 
+---
 
-Current Scope and Limitations
+## 📄 License
 
-This repository contains a front-end React application. The inspected project does not include a server-side API, database, authentication system, or payment integration.
+No `LICENSE` file was present in the supplied project. Add a license file and choose the appropriate license before allowing others to reuse, modify, or redistribute this project.
 
+---
 
-Important implementation notes:
+<div align="center">
 
+### 🍇 Plum & Thread
 
+**Crafting quality. Stitching trust.**
 
-Quotation items are held in React component state; persistent cart storage is not implemented.
+Built with ❤️ using React, Vite, and Tailwind CSS.
 
-The sample request form currently provides client-side form handling and an on-screen success state. A backend or email service must be connected to actually deliver and store submitted requests.
-
-The printable quotation interface is part of the front-end experience; validate the final document and business/tax details before issuing it as an official quotation.
-
-Product information, testimonials, manufacturing statistics, contact details, and prices are maintained as local website content. Confirm that all business claims and contact details are accurate before publishing.
-
-Product photographs are referenced through external image URLs. For production use, consider hosting approved, optimized images in the project or a dedicated image service.
-
-No admin dashboard or content management system is included.
-
-
-Customization
-
-Update products and prices
-
-Edit src/data/products.js, especially the PRODUCTS and CATEGORIES arrays.
-
-
-Update manufacturing stages and website content
-
-The same data file contains manufacturing steps, metrics, testimonials, and FAQ data. Update those entries with verified business information.
-
-
-Update brand colours and fonts
-
-
-Tailwind theme configuration: tailwind.config.js
-
-Global styles: src/index.css
-
-Component styles: src/App.css
-
-Font imports and page metadata: index.html
-
-
-Update contact information
-
-Edit the contact details and address content in src/components/Footer.jsx.
-
-
-Add a real sample-request workflow
-
-Connect the form in src/components/SampleRequestModal.jsx to a backend endpoint or a trusted form/email service. Add server-side validation, spam protection, consent/privacy messaging, and secure handling of personal information before collecting real customer data.
-
-
-Deployment
-
-The production build is a static website and can be deployed to static hosting providers such as:
-
-
-
-Vercel
-
-Netlify
-
-GitHub Pages (with the appropriate Vite base-path configuration)
-
-
-General deployment steps:
-
-
-
-Push the project to a GitHub repository.
-
-Configure the hosting provider to install dependencies with npm install.
-
-Set the build command to npm run build.
-
-Set the publish/output directory to dist.
-
-Deploy and test the production URL, including responsive layouts and modal interactions.
-
-
-For GitHub Pages project sites, configure Vite's base option to match the repository path before building.
-
-
-License
-
-No license file was present in the supplied project. Add a LICENSE file and choose an appropriate license before permitting reuse, modification, or redistribution.
-
-
-
-Built with React, Vite, and Tailwind CSS.
-
+</div>
