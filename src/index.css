@@ -1,0 +1,80 @@
+@import "tailwindcss";
+
+/* Fonts loaded via <link> in index.html: Inter (body) + Playfair Display (headings) */
+
+@theme {
+  --font-sans: 'Inter', system-ui, -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, sans-serif;
+  --font-serif: 'Playfair Display', Georgia, Cambria, serif;
+
+  --color-plum-50: #fbf7f9;
+  --color-plum-100: #f6eff3;
+  --color-plum-200: #eedee7;
+  --color-plum-300: #dfbfd2;
+  --color-plum-400: #c895b3;
+  --color-plum-500: #b06f94;
+  --color-plum-600: #955077;
+  --color-plum-700: #7c3e60;
+  --color-plum-800: #673550;
+  --color-plum-900: #562f44;
+  --color-plum-950: #341726;
+
+  --color-thread-50: #fffbeb;
+  --color-thread-100: #fef3c7;
+  --color-thread-200: #fde68a;
+  --color-thread-300: #fcd34d;
+  --color-thread-400: #fbbf24;
+  --color-thread-500: #f59e0b;
+  --color-thread-600: #d97706;
+  --color-thread-700: #b45309;
+  --color-thread-800: #92400e;
+  --color-thread-900: #78350f;
+}
+
+@layer base {
+  html {
+    scroll-behavior: smooth;
+    font-family: 'Inter', system-ui, -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, sans-serif;
+  }
+}
+
+/* Custom subtle scrollbar */
+::-webkit-scrollbar {
+  width: 8px;
+  height: 8px;
+}
+
+::-webkit-scrollbar-track {
+  background: #f1f5f9;
+}
+
+::-webkit-scrollbar-thumb {
+  background: #cbd5e1;
+  border-radius: 4px;
+}
+
+::-webkit-scrollbar-thumb:hover {
+  background: #94a3b8;
+}
+
+/* Print Styles for Quotation Generator */
+@media print {
+  body * {
+    visibility: hidden;
+  }
+  #printable-quotation, #printable-quotation * {
+    visibility: visible;
+  }
+  #printable-quotation {
+    position: absolute;
+    left: 0;
+    top: 0;
+    width: 100%;
+    margin: 0;
+    padding: 24px;
+    background: white;
+    box-shadow: none !important;
+  }
+  .no-print {
+    display: none !important;
+  }
+}
