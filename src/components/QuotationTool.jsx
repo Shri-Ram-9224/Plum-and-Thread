@@ -225,7 +225,6 @@ export const QuotationTool = ({
                 <input
                   type="number"
                   min="1"
-                  step="5"
                   value={quickAddQty}
                   onChange={(e) => setQuickAddQty(Math.max(1, parseInt(e.target.value) || 1))}
                   className="w-full bg-slate-50 border border-slate-200 rounded-xl px-3 py-2 text-sm font-semibold text-slate-900 focus:outline-none focus:ring-2 focus:ring-plum-700/20 text-center"
