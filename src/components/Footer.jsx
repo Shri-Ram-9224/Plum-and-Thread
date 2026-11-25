@@ -1,14 +1,9 @@
-import React from 'react';
 import { 
-  Building2, 
   MapPin, 
   PhoneCall, 
   Mail, 
   Clock, 
-  ShieldCheck, 
-  MessageCircle, 
   ArrowUp,
-  FileText
 } from 'lucide-react';
 
 export const Footer = ({ onOpenSampleModal }) => {
@@ -209,4 +204,4 @@ export const Footer = ({ onOpenSampleModal }) => {
       </div>
     </footer>
   );
-};
+}

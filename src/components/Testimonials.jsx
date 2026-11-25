@@ -1,6 +1,5 @@
-import React from 'react';
 import { TESTIMONIALS } from '../data/products';
-import { Star, Quote, CheckCircle, Award } from 'lucide-react';
+import { Star, Award } from 'lucide-react';
 
 export const Testimonials = () => {
   return (
@@ -87,4 +86,4 @@ export const Testimonials = () => {
       </div>
     </section>
   );
-};
+}

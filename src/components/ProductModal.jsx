@@ -1,4 +1,4 @@
-import React, { useState, useEffect } from 'react';
+import { useState, useEffect } from 'react';
 import { X, Check, Plus, Layers, Sparkles, Clock, Palette, Ruler } from 'lucide-react';
 import { formatINR, formatPercent } from '../utils/formatters';
 
@@ -49,7 +49,7 @@ export const ProductModal = ({ product, onClose, onAddProduct, inQuoteQty }) => 
         className="relative w-full max-w-4xl bg-white rounded-3xl shadow-2xl border border-slate-200 my-auto cursor-default overflow-hidden max-h-[92vh] flex flex-col animate-in fade-in zoom-in-95 duration-200"
         onClick={(e) => e.stopPropagation()}
       >
-        {/* Modal Top Bar with Title & Prominent Close Button */}
+        {/* Modal Top Bar with Title & Close Button */}
         <div className="bg-slate-900 text-white px-6 py-4 flex items-center justify-between border-b border-slate-800 shrink-0">
           <div className="flex items-center gap-2">
             <span className="w-2.5 h-2.5 rounded-full bg-amber-400"></span>
@@ -69,7 +69,7 @@ export const ProductModal = ({ product, onClose, onAddProduct, inQuoteQty }) => 
           </button>
         </div>
 
-        {/* Scrollable Content Body with Top and Bottom Breathing Room */}
+        {/* Scrollable Content Body */}
         <div className="overflow-y-auto flex-1 p-6 sm:p-8">
           <div className="grid grid-cols-1 md:grid-cols-2 gap-8 items-start">
             
@@ -304,4 +304,4 @@ export const ProductModal = ({ product, onClose, onAddProduct, inQuoteQty }) => 
       </div>
     </div>
   );
-};
+}

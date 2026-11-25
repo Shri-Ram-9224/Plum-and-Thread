@@ -1,13 +1,8 @@
-import React from 'react';
 import { KEY_METRICS } from '../data/products';
 import { 
-  Building2, 
   Award, 
-  Globe2, 
   Users2, 
-  Clock4, 
   ShieldCheck,
-  CheckCircle,
   Leaf
 } from 'lucide-react';
 
@@ -102,4 +97,4 @@ export const CredibilityStats = () => {
       </div>
     </section>
   );
-};
+}

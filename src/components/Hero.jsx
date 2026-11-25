@@ -1,4 +1,3 @@
-import React from 'react';
 import { 
   ArrowRight, 
   ShieldCheck, 
@@ -29,13 +28,13 @@ export const Hero = ({ onAddProduct, onOpenSampleModal }) => {
               <span>DIRECT FROM THE KNITWEAR CAPITAL • TIRUPPUR, INDIA</span>
             </div>
 
-            {/* Main Headline: Optimized to ensure zero gap between 'on' and 'uncompromising' */}
+            {/* Main Headline */}
             <h1 className="text-4xl sm:text-5xl lg:text-6xl font-extrabold tracking-tight text-slate-900 leading-[1.14]">
               Apparel manufacturing built on{' '}
               <span className="text-plum-800 font-serif italic">uncompromising precision</span> &amp; trust.
             </h1>
 
-            {/* Subheading with text-justify */}
+            {/* Subheading */}
             <p className="text-lg sm:text-xl text-slate-600 max-w-2xl leading-relaxed font-normal text-justify">
               Plum & Thread crafts export-grade T-shirts, pique polos, fleece hoodies, and institutional uniforms for brands, schools, and corporate leaders. Transparent mill-direct pricing, certified eco-dyeing, and guaranteed dispatch.
             </p>
@@ -240,4 +239,4 @@ export const Hero = ({ onAddProduct, onOpenSampleModal }) => {
       </div>
     </section>
   );
-};
+}

@@ -1,4 +1,4 @@
-import React, { useState } from 'react';
+import { useState } from 'react';
 import { PRODUCTS } from '../data/products';
 import { formatINR, formatINRDecimal, formatPercent } from '../utils/formatters';
 import { 
@@ -6,7 +6,6 @@ import {
   Trash2, 
   RotateCcw, 
   Printer, 
-  Share2, 
   Copy, 
   Check, 
   ArrowRight, 
@@ -14,11 +13,9 @@ import {
   ShieldCheck, 
   Plus, 
   Minus, 
-  FileText, 
   Package, 
   Percent,
   MessageCircle,
-  HelpCircle,
   ShoppingBag
 } from 'lucide-react';
 
@@ -624,4 +621,4 @@ export const QuotationTool = ({
       </div>
     </section>
   );
-};
+}

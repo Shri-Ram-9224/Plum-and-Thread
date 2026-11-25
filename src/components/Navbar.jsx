@@ -57,7 +57,7 @@ export const Navbar = ({ totalItems }) => {
       <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
         <div className="flex items-center justify-between h-20">
           
-          {/* Brand Logo: PT Icon with company name and place name (Tiruppur) right on the downside */}
+          {/* Brand Logo */}
           <a 
             href="#" 
             onClick={handleLogoClick}
@@ -91,7 +91,7 @@ export const Navbar = ({ totalItems }) => {
             ))}
           </nav>
 
-          {/* Quick Action: ONLY Quote Icon and Count (No text, no price, no free samples) */}
+          {/* Quick Action: Quote Icon and Count */}
           <div className="flex items-center gap-3">
             <a
               href="#quotation-studio"
@@ -120,7 +120,7 @@ export const Navbar = ({ totalItems }) => {
         </div>
       </div>
 
-      {/* Mobile view with backdrop overlay for empty space click */}
+      {/* Mobile view */}
       {mobileMenuOpen && (
         <>
           {/* Plain dark backdrop — no blur — clicking empty space closes menu */}
@@ -165,4 +165,4 @@ export const Navbar = ({ totalItems }) => {
       )}
     </header>
   );
-};
+}

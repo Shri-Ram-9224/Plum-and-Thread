@@ -1,5 +1,4 @@
-import React from 'react';
-import { Calculator, ArrowRight, X } from 'lucide-react';
+import { Calculator, ArrowRight } from 'lucide-react';
 import { formatINR } from '../utils/formatters';
 
 export const FloatingQuoteBar = ({ totalItems, grandTotal, onOpenPrintModal }) => {
@@ -49,4 +48,4 @@ export const FloatingQuoteBar = ({ totalItems, grandTotal, onOpenPrintModal }) =
       </div>
     </div>
   );
-};
+}

@@ -1,4 +1,4 @@
-import React, { useState, useMemo } from 'react';
+import { useState, useMemo } from 'react';
 import { PRODUCTS, CATEGORIES } from '../data/products';
 import { formatINR, formatPercent } from '../utils/formatters';
 import { 
@@ -186,7 +186,7 @@ export const ProductCatalog = ({ quoteItems, onAddProduct, onOpenProductModal })
                   className="group bg-white rounded-2xl border border-slate-200 hover:border-plum-400 shadow-xs hover:shadow-xl transition-all duration-300 flex flex-col overflow-hidden cursor-pointer relative"
                   title="Click to view technical specifications"
                 >
-                  {/* Image Container with Badge (100% Product Only, No Persons) */}
+                  {/* Image Container */}
                   <div className="relative h-56 bg-slate-100 overflow-hidden">
                     <img
                       src={product.image}
@@ -219,7 +219,7 @@ export const ProductCatalog = ({ quoteItems, onAddProduct, onOpenProductModal })
                     </div>
                   </div>
 
-                  {/* Body Content - Complete Texts, No Cut-Offs, Justified */}
+                  {/* Body Content */}
                   <div className="p-5 flex-1 flex flex-col justify-between space-y-4">
                     <div>
                       <div className="text-xs font-semibold text-plum-700 uppercase tracking-wider">
@@ -229,7 +229,7 @@ export const ProductCatalog = ({ quoteItems, onAddProduct, onOpenProductModal })
                         {product.name}
                       </h3>
                       
-                      {/* Description displayed completely without truncation with text-justify */}
+                      {/* Description */}
                       <p className="text-xs text-slate-600 mt-2 leading-relaxed text-justify">
                         {product.description}
                       </p>
@@ -247,7 +247,7 @@ export const ProductCatalog = ({ quoteItems, onAddProduct, onOpenProductModal })
                       </div>
                     </div>
 
-                    {/* Add to Quote Action Area (stop propagation so clicking here does not open modal) */}
+                    {/* Add to Quote Action Area */}
                     <div 
                       className="pt-3 border-t border-slate-100"
                       onClick={(e) => e.stopPropagation()}
@@ -397,4 +397,4 @@ export const ProductCatalog = ({ quoteItems, onAddProduct, onOpenProductModal })
       </div>
     </section>
   );
-};
+}

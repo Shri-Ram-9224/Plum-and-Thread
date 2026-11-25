@@ -1,4 +1,4 @@
-import React, { useState } from 'react';
+import { useState } from 'react';
 import { FAQS } from '../data/products';
 import { ChevronDown, HelpCircle, MessageSquare } from 'lucide-react';
 
@@ -84,4 +84,4 @@ export const FaqSection = ({ onOpenSampleModal }) => {
       </div>
     </section>
   );
-};
+}

@@ -1,6 +1,6 @@
-import React, { useState, useEffect } from 'react';
+import { useState, useEffect } from 'react';
 import confetti from 'canvas-confetti';
-import { X, CheckCircle2, Sparkles, Send, ShieldCheck, PackageCheck, Layers } from 'lucide-react';
+import { X, CheckCircle2, Sparkles, Send } from 'lucide-react';
 import { formatINR } from '../utils/formatters';
 
 export const SampleRequestModal = ({ isOpen, onClose, quoteItems, grandTotal }) => {
@@ -71,14 +71,13 @@ export const SampleRequestModal = ({ isOpen, onClose, quoteItems, grandTotal }) 
   };
 
   return (
-    /* Full-screen backdrop — click empty space to close */
     <div
       className="fixed inset-0 z-50 overflow-y-auto bg-slate-950/75 backdrop-blur-sm cursor-pointer"
       onClick={handleResetAndClose}
     >
-      {/* Centering wrapper with breathing room top & bottom */}
+      {/* Centering wrapper */}
       <div className="flex min-h-full items-center justify-center py-10 px-4">
-        {/* Modal panel — click inside does NOT close */}
+        {/* Modal panel */}
         <div
           className="relative w-full max-w-xl bg-white rounded-3xl shadow-2xl border border-slate-200 flex flex-col cursor-default"
           onClick={(e) => e.stopPropagation()}
@@ -230,4 +229,4 @@ export const SampleRequestModal = ({ isOpen, onClose, quoteItems, grandTotal }) 
       </div>
     </div>
   );
-};
+}

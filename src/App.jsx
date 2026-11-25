@@ -17,7 +17,6 @@ import { SampleRequestModal } from './components/SampleRequestModal';
 export default function App() {
   // Quote State: { [productId]: quantity }
   const [quoteItems, setQuoteItems] = useState({
-    'round-neck-tshirt': 50,
   });
 
   // Modal States
@@ -86,7 +85,7 @@ export default function App() {
 
   return (
     <div className="min-h-screen bg-white text-slate-900 font-sans antialiased flex flex-col">
-      {/* Top Navbar with only Icon and Count */}
+      {/* Top Navbar */}
       <Navbar totalItems={totalPieces} />
 
       <main className="flex-1">

@@ -1,7 +1,7 @@
-import React, { useRef, useEffect } from 'react';
+import { useRef, useEffect } from 'react';
 import { PRODUCTS } from '../data/products';
 import { formatINR, formatINRDecimal, formatPercent, generateQuoteId } from '../utils/formatters';
-import { Printer, X, Download, ShieldCheck, Check, FileDown } from 'lucide-react';
+import { Printer, X, Download } from 'lucide-react';
 
 export const PrintableQuoteModal = ({ quoteItems, onClose }) => {
   const quoteRefId = useRef(generateQuoteId()).current;
@@ -29,14 +29,14 @@ export const PrintableQuoteModal = ({ quoteItems, onClose }) => {
 
   // HSN code mapping
   const hsnMap = {
-    'round-neck-tshirt': '6109.10',
-    'polo-tshirt': '6105.10',
-    'hoodie': '6101.90',
-    'track-pant': '6103.42',
-    'padded-jacket': '6201.93',
-    'logo-cap': '6505.00',
-    'kids-romper': '6111.20',
-    'shorts': '6103.49',
+    'round-neck-tshirt': '6109',
+    'polo-tshirt': '6105',
+    'hoodie': '6101',
+    'track-pant': '6103',
+    'padded-jacket': '6201',
+    'logo-cap': '6505',
+    'kids-romper': '6111',
+    'shorts': '6103',
   };
 
   const activeItems = Object.entries(quoteItems)
@@ -50,7 +50,7 @@ export const PrintableQuoteModal = ({ quoteItems, onClose }) => {
 
       return {
         ...product,
-        hsn: hsnMap[product.id] || '6109.00',
+        hsn: hsnMap[product.id] || '6109',
         qty,
         subtotal,
         gstAmount,
@@ -68,89 +68,13 @@ export const PrintableQuoteModal = ({ quoteItems, onClose }) => {
     window.print();
   };
 
-  // Direct file download for immediate offline save
-  const handleDownloadFile = () => {
-    const content = `
-<!DOCTYPE html>
-<html>
-<head>
-  <meta charset="utf-8">
-  <title>Plum & Thread - Quotation ${quoteRefId}</title>
-  <style>
-    body { font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, sans-serif; padding: 40px; color: #1e293b; }
-    h1 { color: #562f44; margin-bottom: 4px; }
-    table { width: 100%; border-collapse: collapse; margin-top: 24px; font-size: 13px; }
-    th { background: #0f172a; color: white; padding: 10px; text-align: left; }
-    td { padding: 10px; border-bottom: 1px solid #e2e8f0; }
-    .text-right { text-align: right; }
-    .text-center { text-align: center; }
-    .total-card { margin-top: 24px; width: 300px; margin-left: auto; background: #f8fafc; padding: 16px; border-radius: 8px; border: 1px solid #cbd5e1; }
-    .total-row { display: flex; justify-content: space-between; margin-bottom: 8px; }
-    .grand-total { font-size: 18px; font-weight: bold; color: #562f44; border-top: 2px solid #0f172a; padding-top: 8px; }
-  </style>
-</head>
-<body>
-  <h1>PLUM & THREAD APPAREL PVT. LTD.</h1>
-  <p>Plot 42-45, SIDCO Industrial Complex, Kangeyam Road, Tiruppur, Tamil Nadu 641603, India<br>GSTIN: 33AABCP1234F1Z8 • Email: manufacturing@plumandthread.com</p>
-  <hr>
-  <p><strong>Quote Reference:</strong> ${quoteRefId} | <strong>Date:</strong> ${quoteDate} | <strong>Validity:</strong> 30 Days (${validUntilDate})</p>
-  <table>
-    <thead>
-      <tr>
-        <th>#</th>
-        <th>Product</th>
-        <th class="text-center">HSN</th>
-        <th class="text-right">Unit Rate</th>
-        <th class="text-center">Qty (pcs)</th>
-        <th class="text-right">Subtotal</th>
-        <th class="text-center">GST Slab</th>
-        <th class="text-right">GST Amount</th>
-        <th class="text-right">Total</th>
-      </tr>
-    </thead>
-    <tbody>
-      ${activeItems.map((item, i) => `
-        <tr>
-          <td>${i + 1}</td>
-          <td><strong>${item.name}</strong><br><small>${item.fabric}</small></td>
-          <td class="text-center">${item.hsn}</td>
-          <td class="text-right">₹${item.price}</td>
-          <td class="text-center">${item.qty}</td>
-          <td class="text-right">₹${item.subtotal.toLocaleString('en-IN')}</td>
-          <td class="text-center">${Math.round(item.gstRate * 100)}%</td>
-          <td class="text-right">₹${item.gstAmount.toFixed(2)}</td>
-          <td class="text-right"><strong>₹${item.total.toLocaleString('en-IN')}</strong></td>
-        </tr>
-      `).join('')}
-    </tbody>
-  </table>
-  <div class="total-card">
-    <div class="total-row"><span>Total Pieces:</span><strong>${totalPieces} pcs</strong></div>
-    <div class="total-row"><span>Subtotal:</span><span>₹${subtotalSum.toLocaleString('en-IN')}</span></div>
-    <div class="total-row"><span>Total GST:</span><span>₹${Math.round(totalGst).toLocaleString('en-IN')}</span></div>
-    <div class="total-row grand-total"><span>Grand Total:</span><span>₹${Math.round(grandTotal).toLocaleString('en-IN')}</span></div>
-  </div>
-</body>
-</html>
-    `;
-    const blob = new Blob([content], { type: 'text/html;charset=utf-8' });
-    const url = URL.createObjectURL(blob);
-    const link = document.createElement('a');
-    link.href = url;
-    link.download = `Plum-and-Thread-Quotation-${quoteRefId}.html`;
-    document.body.appendChild(link);
-    link.click();
-    document.body.removeChild(link);
-    URL.revokeObjectURL(url);
-  };
 
   return (
-    /* Full-screen backdrop — click empty space to close */
     <div
       className="fixed inset-0 z-50 overflow-y-auto bg-slate-950/80 backdrop-blur-sm cursor-pointer"
       onClick={onClose}
     >
-      {/* Centering wrapper with breathing room top & bottom */}
+      {/* Centering wrapper */}
       <div className="flex min-h-full items-start justify-center py-10 px-2 sm:px-4">
         {/* Modal panel */}
         <div
@@ -165,16 +89,6 @@ export const PrintableQuoteModal = ({ quoteItems, onClose }) => {
             </div>
 
             <div className="flex items-center gap-2 flex-wrap">
-              {/* Download HTML file */}
-              <button
-                onClick={handleDownloadFile}
-                className="inline-flex items-center gap-1.5 px-3 py-1.5 rounded-lg bg-slate-800 hover:bg-slate-700 text-amber-300 font-semibold text-xs border border-slate-700 transition-colors cursor-pointer"
-                title="Download Proforma as HTML file"
-              >
-                <Download className="w-3.5 h-3.5" />
-                <span>Download File</span>
-              </button>
-
               {/* Save / Print as PDF */}
               <button
                 onClick={handlePrint}
@@ -199,7 +113,7 @@ export const PrintableQuoteModal = ({ quoteItems, onClose }) => {
           </div>
 
           {/* ── Printable Quotation Content ── */}
-          <div id="printable-quotation" className="p-6 sm:p-10 bg-white space-y-6">
+          <div id="printable-quotation" className="p-6 sm:p-10 bg-white space-y-6 rounded-b-2xl">
           
           {/* Official Letterhead with PT text */}
           <div className="flex flex-col sm:flex-row items-start justify-between gap-6 pb-6 border-b-2 border-slate-900">
@@ -351,4 +265,5 @@ export const PrintableQuoteModal = ({ quoteItems, onClose }) => {
       </div>
     </div>
   </div>
-)}
+);
+}

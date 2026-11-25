@@ -1,4 +1,3 @@
-import React from 'react';
 import { 
   CheckCircle2, 
   Coins, 
@@ -7,8 +6,7 @@ import {
   Microscope, 
   UserCheck, 
   LeafyGreen,
-  Sparkles,
-  ArrowRight
+  Sparkles
 } from 'lucide-react';
 
 export const WhyChooseUs = ({ onOpenSampleModal }) => {
@@ -135,4 +133,4 @@ export const WhyChooseUs = ({ onOpenSampleModal }) => {
       </div>
     </section>
   );
-};
+}

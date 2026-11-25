@@ -1,4 +1,4 @@
-import React, { useState } from 'react';
+import { useState } from 'react';
 import { MANUFACTURING_STEPS } from '../data/products';
 import { 
   Factory, 
@@ -174,4 +174,4 @@ export const ManufacturingProcess = () => {
       </div>
     </section>
   );
-};
+}
