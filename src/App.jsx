@@ -1,4 +1,4 @@
-import React, { useState, useMemo } from 'react';
+import { useState, useMemo } from 'react';
 import { PRODUCTS } from './data/products';
 import { Navbar } from './components/Navbar';
 import { Hero } from './components/Hero';
