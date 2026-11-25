@@ -96,8 +96,6 @@ The project is currently a **single-page website**. Navigation links move visito
 | `@tailwindcss/vite` | Tailwind CSS integration for Vite |
 | `vite` | Development and production build tool |
 | `@vitejs/plugin-react` | React support in Vite |
-| `postcss` | CSS processing |
-| `autoprefixer` | CSS vendor-prefix processing |
 | `oxlint` | JavaScript and JSX linting |
 | `@types/react` / `@types/react-dom` | React type definitions in the development toolchain |
 
@@ -116,8 +114,6 @@ Both fonts are loaded through Google Fonts in `index.html`.
 Plum-and-Thread/
 │
 ├── public/
-│   ├── favicon.svg
-│   └── icons.svg
 │
 ├── src/
 │   ├── components/
@@ -142,7 +138,6 @@ Plum-and-Thread/
 │   ├── utils/
 │   │   └── formatters.js
 │   │
-│   ├── App.css
 │   ├── App.jsx
 │   ├── index.css
 │   └── main.jsx
